@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml">
+
+    <!-- Sidebar -->
+    <left>
+        <VBox spacing="10" styleClass="sidebar">
+            <children>
+                <Label text="Photo Organizer" styleClass="sidebar-title"/>
+
+                <Button text="Home"      onAction="#showHome"     maxWidth="Infinity"/>
+                <Button text="Migration" onAction="#showMigration" maxWidth="Infinity"/>
+                <Button text="Logs"      onAction="#showLogs"     maxWidth="Infinity"/>
+                <Button text="Summary"   onAction="#showSummary"  maxWidth="Infinity"/>
+                <Button text="Settings"  onAction="#showSettings" maxWidth="Infinity"/>
+                <Button text="About"     onAction="#showAbout"    maxWidth="Infinity"/>
+            </children>
+
+            <padding>
+                <Insets top="15" right="10" bottom="15" left="10"/>
+            </padding>
+        </VBox>
+    </left>
+
+    <!-- Main content area -->
+    <center>
+        <StackPane fx:id="contentPane" styleClass="content-root"/>
+    </center>
+
+</BorderPane>
